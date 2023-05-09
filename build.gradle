@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.san4n.junit5.demo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+tasks.register('nullReturnTestCases', Test) {
+    useJUnitPlatform() {
+        includeTags 'null-return-test'
+    }
+}
