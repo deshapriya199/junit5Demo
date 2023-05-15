@@ -4,12 +4,14 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class StringToDoubleConvertorTest {
 
@@ -36,7 +38,6 @@ class StringToDoubleConvertorTest {
         System.out.println("Stop running ...");
     }
 
-    //check null
     @Test
     @DisplayName("given null string value and expected null value")
     void givenNullString_whenConvert_thenReturnNull(){
@@ -78,10 +79,5 @@ class StringToDoubleConvertorTest {
         assertEquals(123.0, actualValue);
     }
 
-    @Test
-    @Disabled("Not yet implemented")
-    void givenString_bla_bla(){
-
-    }
 
 }
